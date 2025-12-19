@@ -212,6 +212,11 @@ body {
   transition: var(--transition);
 }
 
+
+
+
+
+/*Explore tiers btn*/
 .btn-primary {
   background: linear-gradient(90deg, var(--neon), var(--neon-light));
   color: #051006;
@@ -233,11 +238,36 @@ body {
   opacity: 1;
 }
 
+
+
+
+
+/* View fleet */
+
 .btn-ghost {
   border: 1px solid rgba(255,255,255,0.06);
   color: var(--txt);
   background: transparent;
+  position: relative;
 }
+
+.btn-ghost:hover::after {
+  opacity: 1;
+}
+
+
+.btn-ghost::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  box-shadow: 0 0 20px var(--neon);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+
+
 
 /* HERO STATS */
 .hero-stats {
@@ -413,7 +443,7 @@ body {
 
 
 .tile:hover {
-  transform: scale(1.08) rotate(1deg);
+  transform: scale(1.08) rotate(5deg);
 }
 
 /* ABOUT */
@@ -625,4 +655,43 @@ body {
   .nav.open {
     display: flex;
   }
+}
+
+
+.link.instagram {
+  font-size: 30px;
+  color: #02d325;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.link.instagram:hover {
+  opacity: 0.8;
+}
+
+
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* space between icon & number */
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
+  font-size: 16px;
+}
+
+.social.insta {
+  font-size: 22px;
+  color: #02d325;
+}
+
+.social.tel i {
+  font-size: 16px;
 }
